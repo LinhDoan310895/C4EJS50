@@ -69,6 +69,34 @@ console.log(`Hinh chu nhat co chu vi: ${chuVi}`);
 console.log(`Hinh chu nhat co dien tich: ${dienTich}`);
  */
 
+/*
 let x = parseFloat(prompt("Moi nhap vao gia tri cua x: "));
-let y1 = 4 * (Math.pow(x, 2) + 10 * x * Math.sqrt(x) + 3 * x + 1);
-let y2=
+let y1 = parseFloat(4 * (Math.pow(x, 2) + 10 * x * Math.sqrt(x) + 3 * x + 1));
+let y2 = parseFloat(Math.sin(Math.pow(x, 2) * Math.PI) + Math.sqrt(Math.pow(x, 2) + 1) / (Math.pow(Math.E, 2 * x) + Math.cos(x * Math.pi / 4)));
+console.log(`Gia tri bieu thuc y1 = ${y1}`);
+console.log(`Gia tri bieu thuc y2 = ${y2}`);
+*/
+
+/*
+let a = parseInt(20000);
+let tramNghin = parseInt((Math.floor(a/100000)));
+let chucNghin = parseInt(a%100000);
+if(chucNghin === 50000){
+    console.log(`${a} VND = ${tramNghin} to 100.000 VND + 1 to 50.000 VND + 0 to 20.000 VND + 0 o 10.000 VND`);
+}
+else if(chucNghin === 20000){
+    console.log(`${a} VND = ${tramNghin} to 100.000 VND + 0 to 50.000 VND + 1 to 20.000 VND + 0 o 10.000 VND`);
+}
+else{
+    console.log(`${a} VND = ${tramNghin} to 100.000 VND + 0 to 50.000 VND + 0 to 20.000 VND + 1 o 10.000 VND`);
+}
+*/
+
+/*
+let x = parseInt(prompt("Moi nhap vao 1 so co 3 chu so: "));
+let hangTram = Math.floor(x / 100);
+let hangChuc = Math.floor((x - hangTram * 100) / 10);
+let hangDonVi = x - hangTram * 100 - hangChuc * 10;
+let tong = hangTram + hangChuc + hangDonVi;
+console.log(`So ${x} co tong cac chu so la: ${hangTram} + ${hangChuc} + ${hangDonVi} = ${tong}`);
+*/
