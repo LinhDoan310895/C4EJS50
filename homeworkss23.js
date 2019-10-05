@@ -24,7 +24,7 @@ else {
 }
 */
 
-/*
+/* 
 let year = parseInt(prompt("Moi nhap vao 1 nam bat ky: "));
 let month = parseInt(prompt(`Moi nhap vao 1 thang trong nam ${year}: `));
 
@@ -33,24 +33,35 @@ if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
     check = true;
 }
 
-if (month === 2) {
-    if (check === false){
-        console.log(`Thang ${month} co 28 ngay.`);
-    }
-    else{
+switch(month){
+    case 1: 
+    case 3: 
+    case 5: 
+    case 7: 
+    case 8: 
+    case 10: 
+    case 12:
+        console.log(`Thang ${month} co 31 ngay.`);
+        break;
+    case 4: 
+    case 6: 
+    case 9: 
+    case 11:
         console.log(`Thang ${month} co 29 ngay.`);
-    }
+        break;
+    case 2:
+        if(check === false){
+            console.log(`Thang ${month} co 28 ngay.`);
+        }
+        else{
+            console.log(`Thang ${month} co 29 ngay.`);
+        }
+        break;
+    default:
+        console.log(`Gia tri ${month} vua nhap vao khong phai mot thang.`);
+        break;
 }
-else if (month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12) {
-    console.log(`Thang ${month} co 31 ngay.`);
-}
-else if (month === 4 || month === 6 || month === 9 || month === 11) {
-    console.log(`Thang ${month} co 30 ngay.`);
-}
-else {
-    console.log(`Gia tri ${month} vua nhap vao khong phai mot thang.`);
-}
-*/
+ */
 
 /* 
 const pi = 3.14;
@@ -77,20 +88,17 @@ console.log(`Gia tri bieu thuc y1 = ${y1}`);
 console.log(`Gia tri bieu thuc y2 = ${y2}`);
 */
 
-/*
-let a = parseInt(20000);
-let tramNghin = parseInt((Math.floor(a/100000)));
-let chucNghin = parseInt(a%100000);
-if(chucNghin === 50000){
-    console.log(`${a} VND = ${tramNghin} to 100.000 VND + 1 to 50.000 VND + 0 to 20.000 VND + 0 o 10.000 VND`);
-}
-else if(chucNghin === 20000){
-    console.log(`${a} VND = ${tramNghin} to 100.000 VND + 0 to 50.000 VND + 1 to 20.000 VND + 0 o 10.000 VND`);
-}
-else{
-    console.log(`${a} VND = ${tramNghin} to 100.000 VND + 0 to 50.000 VND + 0 to 20.000 VND + 1 o 10.000 VND`);
-}
-*/
+/* 
+let a = parseInt(prompt("Moi nhap vao so tien X la boi cua 10.000 VND:"));
+let tramNghin = Math.floor(a / 100000);
+let chucNghin1 = a - tramNghin * 100000;
+let chucNghin2 = a - tramNghin * 100000 - chucNghin1 * 50000;
+let chucNghin3 = a - tramNghin * 100000 - chucNghin1 * 50000 - chucNghin2 * 20000;
+console.log(`${a} VND = ${tramNghin} to 100.000 VND
+     + ${chucNghin1} to 50.000 VND
+      + ${chucNghin2} to 20.000 VND
+       + ${chucNghin3} o 10.000 VND`);
+ */
 
 /*
 let x = parseInt(prompt("Moi nhap vao 1 so co 3 chu so: "));
@@ -98,5 +106,5 @@ let hangTram = Math.floor(x / 100);
 let hangChuc = Math.floor((x - hangTram * 100) / 10);
 let hangDonVi = x - hangTram * 100 - hangChuc * 10;
 let tong = hangTram + hangChuc + hangDonVi;
-console.log(`So ${x} co tong cac chu so la: ${hangTram} + ${hangChuc} + ${hangDonVi} = ${tong}`);
-*/
+console.log(`Gia tri cua tong cac chu so cua so ${x} la: ${hangTram} + ${hangChuc} + ${hangDonVi} = ${tong}`);
+ */
