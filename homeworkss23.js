@@ -25,45 +25,6 @@ else {
 */
 
 /* 
-let year = parseInt(prompt("Moi nhap vao 1 nam bat ky: "));
-let month = parseInt(prompt(`Moi nhap vao 1 thang trong nam ${year}: `));
-
-let check = false;
-if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
-    check = true;
-}
-
-switch(month){
-    case 1: 
-    case 3: 
-    case 5: 
-    case 7: 
-    case 8: 
-    case 10: 
-    case 12:
-        console.log(`Thang ${month} co 31 ngay.`);
-        break;
-    case 4: 
-    case 6: 
-    case 9: 
-    case 11:
-        console.log(`Thang ${month} co 29 ngay.`);
-        break;
-    case 2:
-        if(check === false){
-            console.log(`Thang ${month} co 28 ngay.`);
-        }
-        else{
-            console.log(`Thang ${month} co 29 ngay.`);
-        }
-        break;
-    default:
-        console.log(`Gia tri ${month} vua nhap vao khong phai mot thang.`);
-        break;
-}
- */
-
-/* 
 const pi = 3.14;
 let banKinh = parseInt(prompt("Moi nhap vao ban kinh hinh tron: "));
 let chuVi = 2 * banKinh * pi;
