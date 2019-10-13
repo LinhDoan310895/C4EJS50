@@ -50,8 +50,27 @@
 
 // console.log(`S = ${s}`);
 
-let n = parseInt(prompt("Moi nhap vao mot so N: "));
-while (n < 8) {
-    n = parseInt(prompt("Nhap N lon hon 8: "));
+// let n = parseInt(prompt("Moi nhap vao mot so N: "));
+// while (n < 8) {
+//     n = parseInt(prompt("Nhap N lon hon 8: "));
+// }
+// console.log(`N = ${n}`);
+
+let count = 0;
+let n = parseInt(prompt("Moi nhap vao so can kiem tra: "));
+if (n < 2) {
+    console.log(`${n} khong phai SNT.`);
 }
-console.log(`N = ${n}`);
+else {
+    for (let i = 1; i <= n; i++) {
+        if (n % i === 0) {
+            count++;
+        }
+    }
+    if (count == 2) {
+        console.log(`${n} la SNT.`);
+    }
+    else {
+        console.log(`${n} khong phai SNT.`);
+    }
+}

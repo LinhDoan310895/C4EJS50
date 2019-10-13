@@ -157,6 +157,7 @@ switch (month) {
 }
 */
 
+/* 
 let a = parseFloat(prompt("Moi nhap vao gia tri so a: "));
 let b = parseFloat(prompt("Moi nhap vao gia tri so b: "));
 let c = parseFloat(prompt("Moi nhap vao gia tri so c: "));
@@ -208,5 +209,43 @@ else { // a = b
     }
     else { // a = b = c
         console.log(`${c} = ${b} = ${a}`);
+    }
+}
+ */
+
+let a = parseFloat(prompt("Moi nhap vao gia tri so a: "));
+let b = parseFloat(prompt("Moi nhap vao gia tri so b: "));
+let c = parseFloat(prompt("Moi nhap vao gia tri so c: "));
+
+if (a <= 0) {
+    console.log(`Gia tri cua a = ${a}. Moi nhap lai.`);
+}
+else if (b <= 0) {
+    console.log(`Gia tri cua b = ${b}. Moi nhap lai.`);
+}
+else if (c <= 0) {
+    console.log(`Gia tri cua c = ${c}. Moi nhap lai.`);
+}
+
+if (((a + b) < c)
+    || ((a + c) > b)
+    || ((b + c) < a)) {
+    console.log(`Ba canh co do dai ${a}, ${b}, ${c} khong tao thanh mot tam giac.`);
+}
+else {
+    console.log(`Ba canh co do dai ${a}, ${b}, ${c} tao thanh mot tam giac.`);
+    if (Math.sqrt(a) + Math.sqrt(b) === Math.sqrt(c)
+        || Math.sqrt(a) + Math.sqrt(c) === Math.sqrt(b)
+        || Math.sqrt(b) + Math.sqrt(c) === Math.sqrt(a)) {
+        console.log("Tam giac nay la tam giac vuong.");
+    }
+    else if (a === b || b === c || a === c) {
+        console.log("Tam giac nay la tam giac can.");
+    }
+    else if (a == b == c) {
+        console.log("Tam giac nay la tam giac deu.");
+    }
+    else {
+        console.log("Tam giac nay la tam giac thuong.");
     }
 }
