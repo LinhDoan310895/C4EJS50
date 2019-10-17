@@ -167,32 +167,64 @@ let phones = [
 //     console.log(`NSX: ${phones[index].factory}
 //     -------------------------------`);
 // }
-// 5
-let search = prompt("Moi nhap vao tu khoa muon tim kiem: ").toLocaleLowerCase();
+// // 5
+// let search = prompt("Moi nhap vao tu khoa muon tim kiem: ").toLocaleLowerCase();
+// let res = [];
+// for (let index = 0; index < phones.length; index++) {
+//     if (phones[index].name.toLocaleLowerCase().includes(search) == true
+//         || phones[index].factory.toLocaleLowerCase().includes(search) == true
+//         || phones[index].price.toString().includes(search) == true) {
+//         res.push(phones[index]);
+//     }
+// }
+// if (res.length == 0) {
+//     console.log(`Khong co ket qua voi tu khoa ${search}`);
+// }
+// else {
+//     console.log("Danh sach thong tin dien thoai: ");
+//     for (let index = 0; index < res.length; index++) {
+//         console.log(`${index + 1}.
+//     Ten DT: ${res[index].name}`);
+//         if (res[index].price === -1) {
+//             console.log("Gia: Ngung kinh doanh");
+//         }
+//         else if (res[index].price === 0) {
+//             console.log("Gia: Chua co gia");
+//         }
+//         else {
+//             console.log(`Gia: ${res[index].price} VND`);
+//         }
+//         console.log(`NSX: ${res[index].factory}
+//     -------------------------------`);
+//     }
+// }
+// 6
+let priceFrom = parseInt(prompt("Moi ban nhap vao khoang gia can tim kiem tu (don vi trieu): "));
+let priceTo = parseInt(prompt("Moi ban nhap vao khoang gia can tim kiem den (don vi trieu): "));
 let res = [];
 for (let index = 0; index < phones.length; index++) {
-    if (phones[index].name.toLocaleLowerCase().includes(search) == true) {
+    if (priceFrom * Math.pow(10, 6) >= phones[index].price) {
         res.push(phones[index]);
     }
 }
-if (res.length == 0) {
-    console.log(`Khong co ket qua voi tu khoa ${search}`);
-}
-else {
-    console.log("Danh sach thong tin dien thoai: ");
-    for (let index = 0; index < res.length; index++) {
-        console.log(`${index + 1}.
-    Ten DT: ${res[index].name}`);
-        if (res[index].price === -1) {
-            console.log("Gia: Ngung kinh doanh");
-        }
-        else if (res[index].price === 0) {
-            console.log("Gia: Chua co gia");
-        }
-        else {
-            console.log(`Gia: ${res[index].price} VND`);
-        }
-        console.log(`NSX: ${res[index].factory}
-    -------------------------------`);
+for (let index = 0; index < phones.length; index++) {
+    if (priceTo * Math.pow(10, 6) <= phones[index].price) {
+        res.push(phones[index]);
     }
+}
+console.log("Danh sach thong tin dien thoai: ");
+for (let index = 0; index < res.length; index++) {
+    console.log(`${index + 1}.
+    Ten DT: ${res[index].name}`);
+    if (res[index].price === -1) {
+        console.log("Gia: Ngung kinh doanh");
+    }
+    else if (res[index].price === 0) {
+        console.log("Gia: Chua co gia");
+    }
+    else {
+        console.log(`Gia: ${res[index].price} VND`);
+    }
+    console.log(`NSX: ${res[index].factory}
+    -------------------------------`);
 }
