@@ -251,7 +251,7 @@ function nameSearch(txt) {
                 res.push(images.content[index]);
                 count++;
             }
-        
+            // unfinished
         }
     }
 }
