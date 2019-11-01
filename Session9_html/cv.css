@@ -1,0 +1,51 @@
+.container {
+    width: 595px;
+    /* chieu rong */
+    height: 842px;
+    /* chieu cao */
+    margin: auto;
+    /* dat vao giua */
+    padding: 15px;
+}
+
+.main-content {
+    height: 100%;
+    width: calc(40% - 1px);
+    float: left;
+    background-color: #178dc7;
+}
+
+.sub-content {
+    height: 100%;
+    width: 60%;
+    float: right;
+}
+
+.avatar {
+    width: 65%;
+    border-radius: 10px 0 10px 0;
+}
+
+.avatar-content {
+    text-align: center;
+    padding: 29px 13px;
+}
+
+.main-info {
+    padding: 15px;
+    color: white;
+    font-family: monospace;
+    font-size: x-large;
+}
+
+.info-1 {
+    text-align: center;
+}
+
+.border-draf {
+    border: 1px solid black;
+}
+
+.border-right-draf {
+    border-right: 1px solid black;
+}

@@ -244,7 +244,7 @@ function nameSearch(txt) {
     if (images.name.toLocaleLowerCase().include(txt) == true) {
         res.push(images);
         count++;
-    }
+    } // dung while - do
     if (images.content != []) {
         for (let index = 0; index < images.content.length; index++) {
             if (images.content[index].name.toLocaleLowerCase().includes(txt) == true) {

@@ -174,7 +174,7 @@ else {
  */
 // 6
 /* 
-let elecCon = prompt("Moi nhap vao so dien su dung cua ho torng 1 thang (Don vi: kWh): ");
+let elecCon = prompt("Moi nhap vao so dien su dung cua ho trong 1 thang (Don vi: kWh): ");
 let bill = 0;
 let index = 1;
 for (index; index <= 6; index++) {
