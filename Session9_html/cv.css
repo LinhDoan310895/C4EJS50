@@ -5,7 +5,7 @@
     /* chieu cao */
     margin: auto;
     /* dat vao giua */
-    padding: 15px;
+    padding: 4px;
 }
 
 .main-content {
@@ -19,6 +19,7 @@
     height: 100%;
     width: 60%;
     float: right;
+    background-color: #eeedea;
 }
 
 .avatar {
@@ -28,24 +29,35 @@
 
 .avatar-content {
     text-align: center;
-    padding: 29px 13px;
+    padding: 30px 13px 0 13px;
 }
 
 .main-info {
     padding: 15px;
     color: white;
-    font-family: monospace;
-    font-size: x-large;
+    font-family: sans-serif;
+    font-weight: 200;
 }
 
-.info-1 {
+.info-1-main {
+    text-align: center;
+    font-size: 1.7em;
+}
+
+.info-1-sub {
+    font-size: medium;
     text-align: center;
 }
 
-.border-draf {
-    border: 1px solid black;
+.info-2{   
+    font-size: 0.8em;
 }
 
-.border-right-draf {
-    border-right: 1px solid black;
+.info-2-title{
+    float: center;
 }
+
+.info-2 ul{
+    list-style-type: none;
+}
+
